@@ -1,0 +1,284 @@
+/* ---------- Tokens ---------- */
+:root {
+    --bg: #ffffff;
+    --bg-soft: #f4f6f8;
+    --surface: #ffffff;
+    --border: #e2e6ea;
+    --text: #1a1f24;
+    --text-dim: #5c6670;
+    --accent: #007a3d;
+    --link: #1673c9;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 8px 24px rgba(0, 0, 0, .06);
+    --radius: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0b0f14;
+        --bg-soft: #10161d;
+        --surface: #141b23;
+        --border: #232d38;
+        --text: #e6edf3;
+        --text-dim: #93a1ad;
+        --accent: #3fbf7f;
+        --link: #58a6ff;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 32px rgba(0, 0, 0, .4);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    background-image:
+        radial-gradient(70% 55% at 50% -10%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%);
+    background-repeat: no-repeat;
+}
+
+/* ---------- Fit-to-viewport shell ---------- */
+#content {
+    min-height: 100vh;
+    min-height: 100svh;
+    max-width: 900px;
+    margin-inline: auto;
+    padding: clamp(.9rem, 3.5vh, 2rem) clamp(1rem, 5vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(1.1rem, 4vh, 2.4rem);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: clamp(.6rem, 2vh, 1rem);
+}
+
+#logo {
+    width: clamp(120px, 22vh, 200px);
+    height: auto;
+    animation: logo-water 5s infinite ease-in-out;
+}
+
+.hero h1 {
+    font-size: clamp(.95rem, 3vw, 1.15rem);
+    font-weight: 500;
+    color: var(--text-dim);
+    letter-spacing: -.01em;
+}
+
+.name {
+    font-size: clamp(1.6rem, 5.5vw, 2.4rem);
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -.02em;
+}
+
+.tagline {
+    color: var(--text-dim);
+    margin-top: .15rem;
+    font-size: clamp(.85rem, 3vw, 1rem);
+}
+
+@keyframes logo-water {
+
+    0%,
+    100% {
+        transform: scale(1) skew(0, 0);
+        filter: brightness(1);
+    }
+
+    25% {
+        transform: scale(1.03, .97) skew(2deg, -2deg);
+        filter: brightness(1.05);
+    }
+
+    50% {
+        transform: scale(.98, 1.02) skew(-2deg, 2deg);
+        filter: brightness(.98);
+    }
+
+    75% {
+        transform: scale(1.02, .98) skew(1deg, -1deg);
+        filter: brightness(1.03);
+    }
+}
+
+/* ---------- Chips ---------- */
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+    transition: color .2s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: .35rem;
+}
+
+.chips a {
+    display: inline-block;
+    padding: .4rem .9rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+    font-size: .85rem;
+    transition: transform .15s ease, border-color .2s, background .2s;
+}
+
+.chips a:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    background: var(--bg-soft);
+}
+
+/* ---------- Projects ---------- */
+h2 {
+    color: var(--accent);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: clamp(.7rem, 2vh, 1.1rem);
+}
+
+.projects {
+    display: grid;
+    gap: clamp(.7rem, 2vh, 1rem);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+.card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: clamp(.8rem, 2.2vh, 1.1rem);
+    box-shadow: var(--shadow);
+    transition: transform .18s ease, border-color .2s;
+}
+
+/* whole card is clickable via the title link */
+.card-title::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+}
+
+.badge {
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+
+.card-title:hover {
+    color: var(--link);
+}
+
+.card a:hover {
+    text-decoration: none;
+}
+
+.tag {
+    font-size: .62rem;
+    font-weight: 500;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: .1rem .5rem;
+}
+
+.card p {
+    color: var(--text-dim);
+    font-size: .82rem;
+    margin: .35rem 0 .6rem;
+}
+
+.badge img {
+    display: block;
+    height: 20px;
+    width: auto;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    color: var(--text-dim);
+    font-size: .78rem;
+    text-align: center;
+}
+
+/* ---------- a11y ---------- */
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Desktop: sit side by side to save vertical space */
+@media (min-width: 760px) and (min-height: 480px) {
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .hero-text {
+        max-width: 340px;
+    }
+
+    .chips {
+        justify-content: flex-start;
+    }
+}
