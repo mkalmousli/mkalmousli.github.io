@@ -267,10 +267,6 @@ footer {
     color: var(--link);
 }
 
-.host {
-    opacity: .8;
-}
-
 /* ---------- Legal / doc pages ---------- */
 #content.doc {
     display: block;
