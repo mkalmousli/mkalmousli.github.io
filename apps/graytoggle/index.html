@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <title>graytoggle — instant grayscale for Linux (XFCE4)</title>
+    <meta name="description"
+        content="graytoggle — one command turns your entire Linux (XFCE4) screen black-and-white with a real-time GLSL compositor shader. Free & open source.">
+    <meta name="author" content="Mohamad Almousli">
+    <meta name="keywords"
+        content="graytoggle, Linux grayscale, XFCE4 grayscale, monochrome screen, picom shader, GLSL, digital wellbeing, dopamine detox, Mohamad Almousli">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="al-mo.de">
+    <meta property="og:title" content="graytoggle — instant grayscale for Linux (XFCE4)">
+    <meta property="og:description"
+        content="One command turns your entire screen black-and-white — a pure-software compositor shader.">
+    <meta property="og:url" content="https://al-mo.de/apps/graytoggle/">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/mkalmousli/graytoggle/master/assets/social-preview.png">
+    <meta property="og:image:alt" content="graytoggle: screen before and after grayscale">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="graytoggle — instant grayscale for Linux (XFCE4)">
+    <meta name="twitter:description" content="One command turns your entire screen black-and-white.">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/mkalmousli/graytoggle/master/assets/social-preview.png">
+
+    <link rel="canonical" href="https://al-mo.de/apps/graytoggle/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/assets/mk.svg">
+    <link rel="apple-touch-icon" href="/assets/mk.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "SoftwareApplication",
+                "name": "graytoggle",
+                "operatingSystem": "Linux (X11, XFCE4)",
+                "applicationCategory": "DeveloperApplication",
+                "description": "Instant grayscale mode for the XFCE4 desktop: one command runs a real-time GLSL shader through the compositor to turn the whole screen black-and-white, and one command turns it back.",
+                "url": "https://al-mo.de/apps/graytoggle/",
+                "image": "https://raw.githubusercontent.com/mkalmousli/graytoggle/master/assets/social-preview.png",
+                "screenshot": "https://raw.githubusercontent.com/mkalmousli/graytoggle/master/assets/example.png",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                "author": { "@type": "Person", "name": "Mohamad Almousli", "url": "https://al-mo.de/" },
+                "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+                "codeRepository": "https://github.com/mkalmousli/graytoggle"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://al-mo.de/" },
+                    { "@type": "ListItem", "position": 2, "name": "graytoggle", "item": "https://al-mo.de/apps/graytoggle/" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <main id="content" class="app">
+        <a class="back" href="/">&larr; al-mo.de</a>
+
+        <header class="app-hero">
+            <div class="app-intro">
+                <h1>graytoggle</h1>
+                <p class="lede">Instant grayscale mode for Linux, built for the XFCE4 desktop. One command turns your
+                    whole screen black-and-white — one command turns it back.</p>
+                <div class="cta-row">
+                    <a class="btn primary" href="https://github.com/mkalmousli/graytoggle" rel="noopener">View on
+                        GitHub</a>
+                    <a class="btn" href="#install">Install</a>
+                </div>
+                <p>
+                    <a href="https://github.com/mkalmousli/graytoggle" rel="noopener"><img loading="lazy"
+                            src="https://img.shields.io/github/v/release/mkalmousli/graytoggle?style=flat-square&label=release"
+                            alt="Latest release" height="20" /></a>
+                    <a href="https://github.com/mkalmousli/graytoggle/blob/master/LICENSE" rel="noopener"><img
+                            loading="lazy"
+                            src="https://img.shields.io/github/license/mkalmousli/graytoggle?style=flat-square"
+                            alt="License: GPL-3.0" height="20" /></a>
+                </p>
+            </div>
+        </header>
+
+        <div class="shots" aria-label="graytoggle before and after">
+            <img loading="lazy"
+                src="https://raw.githubusercontent.com/mkalmousli/graytoggle/master/assets/example.png"
+                alt="Desktop shown in colour and in grayscale side by side" />
+            <img loading="lazy"
+                src="https://raw.githubusercontent.com/mkalmousli/graytoggle/master/assets/off.png"
+                alt="Desktop in full colour" />
+            <img loading="lazy"
+                src="https://raw.githubusercontent.com/mkalmousli/graytoggle/master/assets/on.png"
+                alt="Same desktop in grayscale" />
+        </div>
+
+        <section>
+            <h2>Overview</h2>
+            <p>Grayscale mode is one of the best-known tricks for cutting screen addiction and doomscrolling — iOS and
+                Android have shipped it for years. Linux desktops, and XFCE4 in particular, never got one: unlike
+                GNOME or KDE there is no setting to flip. <code>graytoggle</code> is that missing feature, as a single
+                command you can bind to a hotkey.</p>
+        </section>
+
+        <section>
+            <h2>What I built</h2>
+            <div class="callout">
+                <p>The hard part isn't the shader — it's owning the compositor safely. Running <code>graytoggle</code>
+                    disables xfwm4's built-in compositor via <code>xfconf-query</code>, hot-swaps in
+                    <code>picom</code> with a per-window fragment shader, and on the next run stops
+                    <code>picom</code> and hands compositing cleanly back to xfwm4 — no orphan processes, shadows and
+                    transparency intact, and a safe rollback if any step fails.</p>
+                <p>The shader computes real luminance (<code>0.2126R + 0.7152G + 0.0722B</code>) per pixel, per
+                    window, live. Nothing about the display, monitor, or graphics driver is touched — it is a pure
+                    compositing-layer effect. Missing dependencies are detected and the exact install command is
+                    printed for apt, dnf, pacman, or zypper.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Built with</h2>
+            <div class="stack-group">
+                <h3>Languages</h3>
+                <div class="pills">
+                    <span class="pill">Python</span>
+                    <span class="pill">GLSL (fragment shader)</span>
+                    <span class="pill">Shell</span>
+                    <span class="pill">Makefile</span>
+                </div>
+            </div>
+            <div class="stack-group">
+                <h3>Platform</h3>
+                <div class="pills">
+                    <span class="pill">Linux / X11</span>
+                    <span class="pill">XFCE4 · xfwm4</span>
+                    <span class="pill">picom compositor</span>
+                    <span class="pill">xfconf-query</span>
+                    <span class="pill">xprop</span>
+                </div>
+            </div>
+            <div class="stack-group">
+                <h3>Delivery</h3>
+                <div class="pills">
+                    <span class="pill">make install / uninstall</span>
+                    <span class="pill">curl one-liner installer</span>
+                    <span class="pill">Git</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>One command, toggles</h3>
+                    <p>Run it to turn grayscale on; run it again to turn it off.</p>
+                </div>
+                <div class="feature">
+                    <h3>100% software</h3>
+                    <p>No monitor settings, no night-light gimmicks — a real-time compositor shader.</p>
+                </div>
+                <div class="feature">
+                    <h3>Clean handover</h3>
+                    <p>Compositing returns to xfwm4 exactly as it was, every time.</p>
+                </div>
+                <div class="feature">
+                    <h3>Dependency-aware</h3>
+                    <p>Detects what's missing and prints the right install command for your package manager.</p>
+                </div>
+                <div class="feature">
+                    <h3><code>--force</code> takeover</h3>
+                    <p>Take over from another running compositor when you need to.</p>
+                </div>
+                <div class="feature">
+                    <h3>Hotkey-friendly</h3>
+                    <p>Bind it in XFCE Keyboard settings for a one-key grayscale toggle.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="install">
+            <h2>Install</h2>
+            <p>One-liner (clones the repo and runs <code>make install</code>):</p>
+            <div class="callout">
+                <p><code>curl -fsSL
+                        https://raw.githubusercontent.com/mkalmousli/graytoggle/master/install.sh | sh</code></p>
+            </div>
+            <p>Installs to <code>~/.local/bin/graytoggle</code>. Then bind <code>graytoggle</code> to a shortcut and
+                toggle grayscale with one key. Full instructions and manual install are in the
+                <a href="https://github.com/mkalmousli/graytoggle" rel="noopener">README</a>.</p>
+        </section>
+
+        <section>
+            <h2>Free &amp; open source</h2>
+            <p>graytoggle is licensed under the GPL-3.0. Issues and contributions are welcome on
+                <a href="https://github.com/mkalmousli/graytoggle" rel="noopener">GitHub</a>.</p>
+        </section>
+
+        <div class="meta">
+            <span>Linux · XFCE4</span>
+            <span>GPL-3.0</span>
+            <span>Python · GLSL</span>
+            <span>By <a href="/">Mohamad Almousli</a></span>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -241,6 +241,25 @@ h2 {
     width: auto;
 }
 
+.more-list {
+    font-size: .88rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+}
+
+.more-list li+li {
+    margin-top: .4rem;
+}
+
+.more-list a {
+    color: var(--link);
+}
+
+.more-list .tag {
+    margin: 0 .1rem 0 .3rem;
+    vertical-align: middle;
+}
+
 /* ---------- Footer ---------- */
 footer {
     color: var(--text-dim);
