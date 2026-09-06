@@ -92,10 +92,61 @@
         </div>
 
         <section>
-            <h2>Why you'll want it</h2>
+            <h2>Overview</h2>
             <p>Watching a YouTube Short, a Reel, or any video and need silence <em>now</em>? One tap on the floating
                 button mutes your device — another tap restores the exact volume you had before. No pulling down the
-                status bar, no volume rocker, no leaving the app.</p>
+                status bar, no volume rocker, no leaving the app. Around 13k+ users on F-Droid.</p>
+        </section>
+
+        <section>
+            <h2>What I built</h2>
+            <div class="callout">
+                <p>Sole developer and maintainer. The app draws a persistent overlay with <code>WindowManager</code>
+                    (<code>TYPE_APPLICATION_OVERLAY</code>) that survives outside the app, backed by a foreground
+                    <code>Service</code> so Android's background limits don't kill it. It hooks the system
+                    <code>AudioManager</code> and a <code>ContentObserver</code> to stay in sync with hardware volume
+                    changes, and persists per-orientation button positions and theme settings.</p>
+                <p>Recent work: migrated to a foreground service to fix background kills, rebuilt the UI on Material 3
+                    with Material You dynamic colour and runtime Light/Dark/System theming, added a live-preview
+                    Themes screen (size, colour, opacity, corner radius), bubble-style drag-to-hide, and fixed a
+                    launch crash on Android 14+. Releases are reproducible builds verified by F-Droid.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Built with</h2>
+            <div class="stack-group">
+                <h3>Language</h3>
+                <div class="pills"><span class="pill">Kotlin</span></div>
+            </div>
+            <div class="stack-group">
+                <h3>Platform</h3>
+                <div class="pills">
+                    <span class="pill">Android SDK (minSdk 21 · targetSdk 34)</span>
+                    <span class="pill">Foreground Service</span>
+                    <span class="pill">WindowManager overlay</span>
+                    <span class="pill">AudioManager</span>
+                </div>
+            </div>
+            <div class="stack-group">
+                <h3>Libraries</h3>
+                <div class="pills">
+                    <span class="pill">AndroidX AppCompat</span>
+                    <span class="pill">Fragments</span>
+                    <span class="pill">Material Components (Material 3)</span>
+                    <span class="pill">Kotlin Coroutines</span>
+                    <span class="pill">AndroidX Lifecycle</span>
+                </div>
+            </div>
+            <div class="stack-group">
+                <h3>Build &amp; delivery</h3>
+                <div class="pills">
+                    <span class="pill">Gradle (Kotlin DSL + version catalogs)</span>
+                    <span class="pill">Fastlane metadata</span>
+                    <span class="pill">F-Droid reproducible builds</span>
+                    <span class="pill">Git</span>
+                </div>
+            </div>
         </section>
 
         <section>

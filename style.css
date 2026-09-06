@@ -486,6 +486,62 @@ footer {
     margin-top: 3rem;
 }
 
+/* tech stack */
+.stack-group {
+    margin-bottom: 1.1rem;
+}
+
+.stack-group h3 {
+    font-size: .72rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin: 0 0 .5rem;
+}
+
+.pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+}
+
+.pill {
+    font-size: .8rem;
+    padding: .32rem .7rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--text);
+}
+
+.app .callout {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.2rem;
+}
+
+.app .callout p+p {
+    margin-top: .6rem;
+}
+
+.app section p {
+    color: var(--text);
+    font-size: .92rem;
+}
+
+.app section p a {
+    color: var(--link);
+}
+
+.app code {
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: .05em .35em;
+    font-size: .85em;
+}
+
 /* ---------- a11y ---------- */
 a:focus-visible {
     outline: 2px solid var(--accent);

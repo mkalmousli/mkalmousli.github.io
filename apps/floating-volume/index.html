@@ -95,10 +95,69 @@
         </div>
 
         <section>
-            <h2>Why you'll want it</h2>
+            <h2>Overview</h2>
             <p>The hardware volume keys are clumsy and the system panel gets in the way. Floating Volume puts a clean
                 slider on top of everything, so a single drag sets the exact level you want — during a video, a call,
-                a game, anything.</p>
+                a game, anything. Around 23k+ users on F-Droid.</p>
+        </section>
+
+        <section>
+            <h2>What I built</h2>
+            <div class="callout">
+                <p>Sole developer and maintainer. A Flutter app with a native Android overlay: the Dart side owns the
+                    UI and state, and a Kotlin service renders the system-overlay slider and streams volume events
+                    back. The Dart↔Kotlin boundary is fully type-safe, generated with <strong>Pigeon</strong> instead
+                    of stringly-typed method channels. State is modelled with the <strong>BLoC</strong> pattern and
+                    immutable <strong>freezed</strong> unions.</p>
+                <p>Recent work: an adjustable slider-size setting with live overlay updates, density-independent
+                    sizing so the control looks right on every screen, and a refreshed Material 3 home and
+                    permissions flow. Builds are reproducible — a <code>build.py</code> + Docker pipeline with a
+                    pinned Flutter version (FVM) that F-Droid verifies against source.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Built with</h2>
+            <div class="stack-group">
+                <h3>Languages</h3>
+                <div class="pills">
+                    <span class="pill">Dart</span>
+                    <span class="pill">Kotlin</span>
+                    <span class="pill">Python</span>
+                </div>
+            </div>
+            <div class="stack-group">
+                <h3>Framework</h3>
+                <div class="pills">
+                    <span class="pill">Flutter 3.29</span>
+                    <span class="pill">Android SDK</span>
+                    <span class="pill">System-overlay window</span>
+                </div>
+            </div>
+            <div class="stack-group">
+                <h3>Architecture &amp; libraries</h3>
+                <div class="pills">
+                    <span class="pill">BLoC / flutter_bloc</span>
+                    <span class="pill">freezed</span>
+                    <span class="pill">Pigeon (platform channels)</span>
+                    <span class="pill">permission_handler</span>
+                    <span class="pill">volume_controller</span>
+                    <span class="pill">device_info_plus</span>
+                    <span class="pill">shared_preferences</span>
+                    <span class="pill">flutter_svg</span>
+                </div>
+            </div>
+            <div class="stack-group">
+                <h3>Build &amp; delivery</h3>
+                <div class="pills">
+                    <span class="pill">FVM</span>
+                    <span class="pill">Docker</span>
+                    <span class="pill">build_runner / codegen</span>
+                    <span class="pill">GitHub Actions</span>
+                    <span class="pill">Fastlane metadata</span>
+                    <span class="pill">F-Droid reproducible builds</span>
+                </div>
+            </div>
         </section>
 
         <section>
