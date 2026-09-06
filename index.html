@@ -7,7 +7,7 @@
     <meta name="color-scheme" content="dark light">
     <title>mkalmousli — Software Developer</title>
     <meta name="description"
-        content="Mohammed Kalmousli — Software Developer. Open-source projects for Android, Flutter & Dart.">
+        content="Mohamad Almousli — Software Developer. Open-source projects and home for web apps and services on al-mo.de.">
     <meta name="author" content="Mohamad Almousli">
     <meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)">
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
@@ -16,13 +16,14 @@
     <meta property="og:title" content="mkalmousli — Software Developer">
     <meta property="og:description" content="Open-source projects for Android, Flutter & Dart.">
     <meta property="og:url" content="https://mkalmousli.dev">
-    <meta property="og:image" content="https://mkalmousli.dev/mk.png">
+    <meta property="og:image" content="https://mkalmousli.dev/assets/mk.png">
     <meta name="twitter:card" content="summary">
 
     <link rel="canonical" href="https://mkalmousli.dev">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/mk.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/assets/mk.svg">
+    <link rel="apple-touch-icon" href="/assets/mk.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +43,8 @@
             "https://github.com/mkalmousli",
             "https://gitlab.com/mkalmousli",
             "https://www.instagram.com/mkalmousli"
-        ]
+        ],
+        "email": "mailto:mohamad@al-mo.de"
     }
     </script>
 </head>
@@ -50,7 +52,7 @@
 <body>
     <main id="content">
         <header class="hero">
-            <img src="mk.svg" alt="mkalmousli logo" id="logo" width="300" height="300" />
+            <img src="/assets/mk.svg" alt="mkalmousli logo" id="logo" width="300" height="300" />
             <div class="hero-text">
                 <p class="name">Mohamad Almousli</p>
                 <h1>@mkalmousli</h1>
@@ -59,6 +61,7 @@
                     <li><a href="https://github.com/mkalmousli" rel="me noopener">GitHub</a></li>
                     <li><a href="https://gitlab.com/mkalmousli" rel="me noopener">GitLab</a></li>
                     <li><a href="https://www.instagram.com/mkalmousli" rel="me noopener">Instagram</a></li>
+                    <li><a href="mailto:mohamad@al-mo.de">Email</a></li>
                 </ul>
             </div>
         </header>
@@ -95,7 +98,15 @@
             </div>
         </section>
 
-        <footer>&copy; <span id="year">2026</span> Mohamad Almousli</footer>
+        <footer>
+            <p>&copy; <span id="year">2026</span> Mohamad Almousli</p>
+            <nav class="foot-links" aria-label="Site">
+                <a href="https://github.com/mkalmousli/mkalmousli.github.io" rel="noopener">View source</a>
+                <a href="/privacy/">Privacy</a>
+                <a href="/terms/">Terms</a>
+            </nav>
+            <p class="host">Hosted on <a href="https://pages.cloudflare.com/" rel="noopener">Cloudflare Pages</a>.</p>
+        </footer>
     </main>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>

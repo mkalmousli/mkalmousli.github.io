@@ -246,6 +246,97 @@ footer {
     color: var(--text-dim);
     font-size: .78rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    align-items: center;
+}
+
+.foot-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .4rem .9rem;
+}
+
+.foot-links a {
+    color: var(--text-dim);
+}
+
+.foot-links a:hover {
+    color: var(--link);
+}
+
+.host {
+    opacity: .8;
+}
+
+/* ---------- Legal / doc pages ---------- */
+#content.doc {
+    display: block;
+    max-width: 720px;
+    padding-block: clamp(2rem, 6vh, 4rem);
+}
+
+.doc h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: .3rem;
+}
+
+.doc .updated {
+    color: var(--text-dim);
+    font-size: .85rem;
+    margin-bottom: 2rem;
+}
+
+.doc h2 {
+    text-align: left;
+    font-size: 1.05rem;
+    margin: 2rem 0 .6rem;
+}
+
+.doc p,
+.doc li {
+    color: var(--text);
+    font-size: .92rem;
+    margin-bottom: .7rem;
+}
+
+.doc ul {
+    padding-left: 1.2rem;
+    list-style: disc;
+}
+
+.doc-home {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.doc-home img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.doc .back {
+    display: block;
+    margin-bottom: 2rem;
+    font-size: .85rem;
+    color: var(--text-dim);
+}
+
+.doc .back:hover {
+    color: var(--link);
+}
+
+.doc a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.doc .back:hover,
+.doc-home:hover {
+    text-decoration: none;
 }
 
 /* ---------- a11y ---------- */
