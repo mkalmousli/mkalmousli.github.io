@@ -241,23 +241,59 @@ h2 {
     width: auto;
 }
 
-.more-list {
-    font-size: .88rem;
+/* ---------- Libraries / secondary list ---------- */
+.section-sub {
+    text-align: center;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
     color: var(--text-dim);
-    line-height: 1.7;
+    margin-top: clamp(2rem, 6vh, 3.25rem);
+    margin-bottom: .9rem;
 }
 
-.more-list li+li {
-    margin-top: .4rem;
+.lib-list {
+    display: grid;
+    gap: .7rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
 }
 
-.more-list a {
-    color: var(--link);
+.lib-list li {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: .85rem 1rem;
+    transition: border-color .2s;
 }
 
-.more-list .tag {
-    margin: 0 .1rem 0 .3rem;
-    vertical-align: middle;
+.lib-list li:hover {
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.lib-head {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.lib-name {
+    font-weight: 700;
+    color: var(--text);
+    font-size: .95rem;
+}
+
+.lib-desc {
+    color: var(--text-dim);
+    font-size: .84rem;
+    margin: .3rem 0 .55rem;
+}
+
+.lib-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .9rem;
+    font-size: .82rem;
 }
 
 /* ---------- Footer ---------- */
@@ -561,6 +597,38 @@ footer {
     font-size: .85em;
 }
 
+/* terminal command block */
+.cmd {
+    position: relative;
+    background: #0b0f14;
+    color: #e6edf3;
+    border: 1px solid #232d38;
+    border-radius: var(--radius);
+    padding: .95rem 1.1rem .95rem 2.4rem;
+    overflow-x: auto;
+    font-size: .85rem;
+    line-height: 1.5;
+    -webkit-overflow-scrolling: touch;
+}
+
+.cmd::before {
+    content: "$";
+    position: absolute;
+    left: 1.1rem;
+    color: var(--accent);
+    font-weight: 700;
+    user-select: none;
+}
+
+.cmd code {
+    background: none;
+    border: 0;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre;
+}
+
 /* ---------- a11y ---------- */
 a:focus-visible {
     outline: 2px solid var(--accent);
@@ -578,7 +646,7 @@ a:focus-visible {
     }
 }
 
-/* Desktop: sit side by side to save vertical space */
+/* Tablet / short-desktop: hero sits beside its text to save vertical space */
 @media (min-width: 760px) and (min-height: 480px) {
     .hero {
         flex-direction: row;
@@ -593,5 +661,95 @@ a:focus-visible {
 
     .chips {
         justify-content: flex-start;
+    }
+}
+
+/* Desktop: two columns — identity rail on the left, work on the right */
+@media (min-width: 1000px) and (min-height: 560px) {
+    #content {
+        max-width: 1140px;
+        display: grid;
+        grid-template-columns: minmax(300px, 380px) 1fr;
+        grid-template-rows: auto auto;
+        column-gap: clamp(3rem, 7vw, 6rem);
+        row-gap: 2rem;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .hero {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        align-self: center;
+        gap: 1.25rem;
+    }
+
+    #logo {
+        width: clamp(160px, 15vw, 220px);
+    }
+
+    .hero h1 {
+        font-size: 1.1rem;
+    }
+
+    .name {
+        font-size: clamp(2rem, 2.6vw, 2.75rem);
+    }
+
+    .tagline {
+        font-size: 1.05rem;
+    }
+
+    .chips {
+        justify-content: flex-start;
+    }
+
+    section[aria-labelledby="projects_title"] {
+        grid-column: 2;
+        grid-row: 1;
+        margin-top: 0;
+        align-self: center;
+    }
+
+    #content > footer {
+        grid-column: 2;
+        grid-row: 2;
+        align-items: flex-start;
+        text-align: left;
+        margin-top: 1rem;
+    }
+
+    .foot-links {
+        justify-content: flex-start;
+    }
+
+    #projects_title {
+        text-align: left;
+    }
+
+    .section-sub {
+        text-align: left;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Wide desktop: let the work area breathe into 3 columns */
+@media (min-width: 1400px) and (min-height: 560px) {
+    #content {
+        max-width: 1320px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .lib-list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
