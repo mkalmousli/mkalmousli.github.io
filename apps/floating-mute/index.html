@@ -9,18 +9,29 @@
     <meta name="description"
         content="Floating Mute — mute and unmute your Android with a single tap from a draggable floating button. Free, open source, on F-Droid.">
     <meta name="author" content="Mohamad Almousli">
+    <meta name="keywords"
+        content="Floating Mute, Android mute app, floating button, one tap mute, F-Droid, open source, Kotlin, Mohamad Almousli">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)">
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="al-mo.de">
     <meta property="og:title" content="Floating Mute — Android">
     <meta property="og:description" content="Mute and unmute your Android with a single tap. Free & open source.">
     <meta property="og:url" content="https://al-mo.de/apps/floating-mute/">
     <meta property="og:image"
         content="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/icon.png">
+    <meta property="og:image:alt" content="Floating Mute app icon">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Floating Mute — Android">
+    <meta name="twitter:description" content="Mute and unmute your Android with a single tap. Free & open source.">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/icon.png">
 
     <link rel="canonical" href="https://al-mo.de/apps/floating-mute/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/svg+xml" href="/assets/mk.svg">
@@ -33,14 +44,29 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Floating Mute",
-        "operatingSystem": "Android",
-        "applicationCategory": "UtilitiesApplication",
-        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-        "author": { "@type": "Person", "name": "Mohamad Almousli", "url": "https://al-mo.de" },
-        "license": "https://www.gnu.org/licenses/gpl-3.0.html",
-        "downloadUrl": "https://f-droid.org/en/packages/com.github.mkalmousli.floating_mute"
+        "@graph": [
+            {
+                "@type": "SoftwareApplication",
+                "name": "Floating Mute",
+                "operatingSystem": "Android 5.0+",
+                "applicationCategory": "UtilitiesApplication",
+                "description": "Mute and unmute your Android with a single tap from a draggable floating button that sits on top of any app.",
+                "url": "https://al-mo.de/apps/floating-mute/",
+                "image": "https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/icon.png",
+                "screenshot": "https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/phoneScreenshots/01.png",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                "author": { "@type": "Person", "name": "Mohamad Almousli", "url": "https://al-mo.de/" },
+                "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+                "downloadUrl": "https://f-droid.org/en/packages/com.github.mkalmousli.floating_mute"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://al-mo.de/" },
+                    { "@type": "ListItem", "position": 2, "name": "Floating Mute", "item": "https://al-mo.de/apps/floating-mute/" }
+                ]
+            }
+        ]
     }
     </script>
 </head>
