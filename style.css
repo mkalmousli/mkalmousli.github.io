@@ -757,6 +757,12 @@ footer {
     transition: transform .15s ease, border-color .2s, background .2s;
 }
 
+.btn svg {
+    width: 15px;
+    height: 15px;
+    flex: 0 0 auto;
+}
+
 .btn:hover {
     text-decoration: none;
     transform: translateY(-2px);
