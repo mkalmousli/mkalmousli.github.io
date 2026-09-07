@@ -38,6 +38,7 @@
     <link rel="apple-touch-icon" href="/assets/mk.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap"
         rel="stylesheet">
 
@@ -72,164 +73,157 @@
 </head>
 
 <body>
-    <main id="content" class="app">
-        <a class="back" href="/">&larr; al-mo.de</a>
+    <header class="story-header">
+        <a class="brand" href="/">
+            <img src="/assets/mk.svg" alt="" width="20" height="20" />
+            <span>al-mo.de</span>
+        </a>
+        <span class="app-id">
+            <img src="https://raw.githubusercontent.com/mkalmousli/FloatingVolume/main/fastlane/metadata/android/en-US/images/icon.png" alt="" width="22" height="22" />
+            <span class="app-name">Floating Volume</span>
+        </span>
+    </header>
 
-        <header class="app-hero">
-            <img class="app-icon"
-                src="https://raw.githubusercontent.com/mkalmousli/FloatingVolume/main/fastlane/metadata/android/en-US/images/icon.png"
-                alt="Floating Volume icon" width="104" height="104" />
-            <div class="app-intro">
+    <main id="content" class="story-page">
+
+        <section class="chapter chapter--hero">
+            <div class="chapter-copy">
+                <img class="hero-logo" src="https://raw.githubusercontent.com/mkalmousli/FloatingVolume/main/fastlane/metadata/android/en-US/images/icon.png" alt="Floating Volume icon" width="96" height="96" />
+                <p class="eyebrow">Android &middot; Free &amp; open source</p>
                 <h1>Floating Volume</h1>
-                <p class="lede">A floating volume slider you can reach from any app — adjust the volume without
-                    leaving what you're doing.</p>
+                <p class="chapter-lede">The exact volume you want, in one move &mdash; without looking away.</p>
                 <div class="cta-row">
-                    <a class="btn primary" href="https://f-droid.org/en/packages/com.github.mkalmousli.floating_volume"
-                        rel="noopener">Get it on F-Droid</a>
-                    <a class="btn" href="https://github.com/mkalmousli/FloatingVolume/releases" rel="noopener">APK on
-                        GitHub</a>
+                    <a class="btn primary" href="https://f-droid.org/en/packages/com.github.mkalmousli.floating_volume" rel="noopener">Get it on F-Droid</a>
+                    <a class="btn" href="https://github.com/mkalmousli/FloatingVolume/releases" rel="noopener">APK on GitHub</a>
                     <a class="btn" href="https://github.com/mkalmousli/FloatingVolume" rel="noopener">Source</a>
                 </div>
-                <p>
-                    <a href="https://f-droid.org/en/packages/com.github.mkalmousli.floating_volume" rel="noopener"><img
-                            loading="lazy"
-                            src="https://img.shields.io/f-droid/v/com.github.mkalmousli.floating_volume?label=F-Droid&style=flat-square"
-                            alt="F-Droid version" height="20" /></a>
-                </p>
             </div>
-        </header>
-
-        <div class="shots" aria-label="Floating Volume screenshots">
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/FloatingVolume/main/screenshots/output/01.png"
-                alt="Floating Volume screenshot 1" />
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/FloatingVolume/main/screenshots/output/02.png"
-                alt="Floating Volume screenshot 2" />
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/FloatingVolume/main/screenshots/output/03.png"
-                alt="Floating Volume screenshot 3" />
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/FloatingVolume/main/screenshots/output/04.png"
-                alt="Floating Volume screenshot 4" />
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/FloatingVolume/main/screenshots/output/05.png"
-                alt="Floating Volume screenshot 5" />
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/FloatingVolume/main/screenshots/output/06.png"
-                alt="Floating Volume screenshot 6" />
-        </div>
-
-        <section>
-            <h2>Overview</h2>
-            <p>The hardware volume keys are clumsy and the system panel gets in the way. Floating Volume puts a clean
-                slider on top of everything, so a single drag sets the exact level you want — during a video, a call,
-                a game, anything.</p>
+            <div class="chapter-media">
+                <img class="device" fetchpriority="high" decoding="async" width="1080" height="2400"
+                    src="https://raw.githubusercontent.com/mkalmousli/FloatingVolume/main/screenshots/output/01.png"
+                    alt="The floating volume slider on top of an app" />
+            </div>
         </section>
 
-        <section>
+        <section class="statement">
+            <p>One drag.<br><span class="accent">Exactly</span> the right level.</p>
+        </section>
+
+        <section class="chapter chapter--split">
+            <div class="chapter-copy">
+                <h2>Over every app</h2>
+                <p>The hardware keys step through fixed notches and the system panel drops down over what you're watching. Floating Volume puts a clean slider on top of everything instead.</p>
+            </div>
+            <div class="chapter-media">
+                <img class="device" loading="lazy" decoding="async" width="1080" height="2400"
+                    src="https://raw.githubusercontent.com/mkalmousli/FloatingVolume/main/screenshots/output/02.png"
+                    alt="Floating Volume slider over another app" />
+            </div>
+        </section>
+
+        <section class="chapter chapter--split reverse">
+            <div class="chapter-copy">
+                <h2>Sized for your thumb</h2>
+                <p>Choose a slider size and the overlay updates live as you drag the setting. Density-independent sizing keeps it right from compact phones to tablets.</p>
+            </div>
+            <div class="chapter-media">
+                <img class="device" loading="lazy" decoding="async" width="1080" height="2400"
+                    src="https://raw.githubusercontent.com/mkalmousli/FloatingVolume/main/screenshots/output/03.png"
+                    alt="Floating Volume size setting" />
+            </div>
+        </section>
+
+        <section class="chapter chapter--split">
+            <div class="chapter-copy">
+                <h2>Clean by default</h2>
+                <p>A refreshed Material 3 home and a permissions flow that gets out of your way. Nothing else to configure.</p>
+            </div>
+            <div class="chapter-media">
+                <img class="device" loading="lazy" decoding="async" width="1080" height="2400"
+                    src="https://raw.githubusercontent.com/mkalmousli/FloatingVolume/main/screenshots/output/04.png"
+                    alt="Floating Volume home screen" />
+            </div>
+        </section>
+
+        <section class="statement">
+            <p>No ads. No tracking.<br>No account. <span class="accent">Ever.</span></p>
+        </section>
+
+        <div class="details">
             <h2>What I built</h2>
             <div class="callout">
                 <p>Sole developer and maintainer. A Flutter app with a native Android overlay: the Dart side owns the
                     UI and state, and a Kotlin service renders the system-overlay slider and streams volume events
-                    back. The Dart↔Kotlin boundary is fully type-safe, generated with <strong>Pigeon</strong> instead
-                    of stringly-typed method channels. State is modelled with the <strong>BLoC</strong> pattern and
-                    immutable <strong>freezed</strong> unions.</p>
+                    back. The Dart&harr;Kotlin boundary is fully type-safe, generated with <strong>Pigeon</strong>
+                    instead of stringly-typed method channels. State is modelled with the <strong>BLoC</strong>
+                    pattern and immutable <strong>freezed</strong> unions.</p>
                 <p>Recent work: an adjustable slider-size setting with live overlay updates, density-independent
-                    sizing so the control looks right on every screen, and a refreshed Material 3 home and
-                    permissions flow. Builds are reproducible — a <code>build.py</code> + Docker pipeline with a
-                    pinned Flutter version (FVM) that F-Droid verifies against source.</p>
+                    sizing, and a refreshed Material 3 home and permissions flow. Builds are reproducible &mdash; a
+                    <code>build.py</code> + Docker pipeline with a pinned Flutter version (FVM) that F-Droid verifies
+                    against source.</p>
             </div>
-        </section>
 
-        <section>
             <h2>Built with</h2>
-            <div class="stack-group">
-                <h3>Languages</h3>
-                <div class="pills">
-                    <span class="pill">Dart</span>
-                    <span class="pill">Kotlin</span>
-                    <span class="pill">Python</span>
+            <div>
+                <div class="stack-group">
+                    <h3>Languages</h3>
+                    <div class="pills">
+                        <span class="pill">Dart</span>
+                        <span class="pill">Kotlin</span>
+                        <span class="pill">Python</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h3>Framework</h3>
+                    <div class="pills">
+                        <span class="pill">Flutter 3.29</span>
+                        <span class="pill">Android SDK</span>
+                        <span class="pill">System-overlay window</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h3>Architecture &amp; libraries</h3>
+                    <div class="pills">
+                        <span class="pill">BLoC / flutter_bloc</span>
+                        <span class="pill">freezed</span>
+                        <span class="pill">Pigeon (platform channels)</span>
+                        <span class="pill">permission_handler</span>
+                        <span class="pill">volume_controller</span>
+                        <span class="pill">device_info_plus</span>
+                        <span class="pill">shared_preferences</span>
+                        <span class="pill">flutter_svg</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h3>Build &amp; delivery</h3>
+                    <div class="pills">
+                        <span class="pill">FVM</span>
+                        <span class="pill">Docker</span>
+                        <span class="pill">build_runner / codegen</span>
+                        <span class="pill">GitHub Actions</span>
+                        <span class="pill">Fastlane metadata</span>
+                        <span class="pill">F-Droid reproducible builds</span>
+                    </div>
                 </div>
             </div>
-            <div class="stack-group">
-                <h3>Framework</h3>
-                <div class="pills">
-                    <span class="pill">Flutter 3.29</span>
-                    <span class="pill">Android SDK</span>
-                    <span class="pill">System-overlay window</span>
-                </div>
-            </div>
-            <div class="stack-group">
-                <h3>Architecture &amp; libraries</h3>
-                <div class="pills">
-                    <span class="pill">BLoC / flutter_bloc</span>
-                    <span class="pill">freezed</span>
-                    <span class="pill">Pigeon (platform channels)</span>
-                    <span class="pill">permission_handler</span>
-                    <span class="pill">volume_controller</span>
-                    <span class="pill">device_info_plus</span>
-                    <span class="pill">shared_preferences</span>
-                    <span class="pill">flutter_svg</span>
-                </div>
-            </div>
-            <div class="stack-group">
-                <h3>Build &amp; delivery</h3>
-                <div class="pills">
-                    <span class="pill">FVM</span>
-                    <span class="pill">Docker</span>
-                    <span class="pill">build_runner / codegen</span>
-                    <span class="pill">GitHub Actions</span>
-                    <span class="pill">Fastlane metadata</span>
-                    <span class="pill">F-Droid reproducible builds</span>
-                </div>
-            </div>
-        </section>
 
-        <section>
-            <h2>Features</h2>
-            <div class="feature-grid">
-                <div class="feature">
-                    <h3>Always-accessible slider</h3>
-                    <p>Floats over every app; drag to set the volume instantly.</p>
-                </div>
-                <div class="feature">
-                    <h3>Adjustable slider size</h3>
-                    <p>Size setting with live overlay updates as you change it.</p>
-                </div>
-                <div class="feature">
-                    <h3>Density-independent sizing</h3>
-                    <p>Looks right on every screen, from compact phones to tablets.</p>
-                </div>
-                <div class="feature">
-                    <h3>Modern Material 3 UI</h3>
-                    <p>Refreshed home and permission screens.</p>
-                </div>
-                <div class="feature">
-                    <h3>Built with Flutter</h3>
-                    <p>Smooth, consistent, and open for contributions.</p>
-                </div>
-                <div class="feature">
-                    <h3>Reproducible builds</h3>
-                    <p>Verified by F-Droid from source.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
             <h2>Free &amp; open source</h2>
-            <p>Floating Volume is licensed under the GPL-3.0. No ads, no tracking, no account. Issues and
-                contributions are welcome on
-                <a href="https://github.com/mkalmousli/FloatingVolume" rel="noopener">GitHub</a>.</p>
-        </section>
+            <p>Licensed under the GPL-3.0. No ads, no tracking, no account. Issues and contributions
+                are welcome on <a href="https://github.com/mkalmousli/FloatingVolume" rel="noopener">GitHub</a>.</p>
 
-        <div class="meta">
-            <span>Android</span>
-            <span>GPL-3.0</span>
-            <span>Package: com.github.mkalmousli.floating_volume</span>
-            <span>By <a href="/">Mohamad Almousli</a></span>
+            <div class="story-meta">
+                <span>Android</span>
+                <span>GPL-3.0</span>
+                <span>com.github.mkalmousli.floating_volume</span>
+                <span>By <a href="/">Mohamad Almousli</a></span>
+            </div>
         </div>
     </main>
+
+    <div class="app-cta-bar">
+        <a class="btn primary" href="https://f-droid.org/en/packages/com.github.mkalmousli.floating_volume" rel="noopener">Get it on F-Droid</a>
+    </div>
+
 </body>
 
 </html>

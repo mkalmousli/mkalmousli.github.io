@@ -39,6 +39,7 @@
     <link rel="apple-touch-icon" href="/assets/mk.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap"
         rel="stylesheet">
 
@@ -73,107 +74,126 @@
 </head>
 
 <body>
-    <main id="content" class="app">
-        <a class="back" href="/">&larr; al-mo.de</a>
+    <header class="story-header">
+        <a class="brand" href="/">
+            <img src="/assets/mk.svg" alt="" width="20" height="20" />
+            <span>al-mo.de</span>
+        </a>
+        <span class="app-id">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#8b949e"/><path d="M12 2a10 10 0 0 1 0 20Z" fill="#1a1f24"/></svg>
+            <span class="app-name">graytoggle</span>
+        </span>
+    </header>
 
-        <header class="app-hero">
-            <div class="app-intro">
+    <main id="content" class="story-page">
+
+        <section class="chapter chapter--hero">
+            <div class="chapter-copy">
+                <span class="hero-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#8b949e"/><path d="M12 2a10 10 0 0 1 0 20Z" fill="#1a1f24"/></svg></span>
+                <p class="eyebrow">Linux &middot; XFCE4 &middot; Open source</p>
                 <h1>graytoggle</h1>
-                <p class="lede">Instant grayscale mode for Linux, built for the XFCE4 desktop. One command turns your
-                    whole screen black-and-white — one command turns it back.</p>
+                <p class="chapter-lede">One key drains the colour from your screen. One key brings it back.</p>
                 <div class="cta-row">
-                    <a class="btn primary" href="https://github.com/mkalmousli/graytoggle" rel="noopener">View on
-                        GitHub</a>
-                    <a class="btn" href="#install">Install</a>
+                    <a class="btn primary" href="#install">Install</a>
+                    <a class="btn" href="https://github.com/mkalmousli/graytoggle" rel="noopener">View on GitHub</a>
                 </div>
-                <p>
-                    <a href="https://github.com/mkalmousli/graytoggle" rel="noopener"><img loading="lazy"
-                            src="https://img.shields.io/github/v/release/mkalmousli/graytoggle?style=flat-square&label=release"
-                            alt="Latest release" height="20" /></a>
-                    <a href="https://github.com/mkalmousli/graytoggle/blob/master/LICENSE" rel="noopener"><img
-                            loading="lazy"
-                            src="https://img.shields.io/github/license/mkalmousli/graytoggle?style=flat-square"
-                            alt="License: GPL-3.0" height="20" /></a>
-                </p>
             </div>
-        </header>
-
-        <div class="shots" aria-label="graytoggle before and after">
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/graytoggle/master/assets/example.png"
-                alt="Desktop shown in colour and in grayscale side by side" />
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/graytoggle/master/assets/off.png"
-                alt="Desktop in full colour" />
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/graytoggle/master/assets/on.png"
-                alt="Same desktop in grayscale" />
-        </div>
-
-        <section>
-            <h2>Overview</h2>
-            <p>Grayscale mode is one of the best-known tricks for cutting screen addiction and doomscrolling — iOS and
-                Android have shipped it for years. Linux desktops, and XFCE4 in particular, never got one: unlike
-                GNOME or KDE there is no setting to flip. <code>graytoggle</code> is that missing feature, as a single
-                command you can bind to a hotkey.</p>
+            <div class="chapter-media">
+                <img class="wide" fetchpriority="high" decoding="async"
+                    src="https://raw.githubusercontent.com/mkalmousli/graytoggle/master/assets/example.png"
+                    alt="A desktop shown in colour and in grayscale side by side" />
+            </div>
         </section>
 
-        <section>
+        <section class="statement">
+            <p>A screen with no colour is simply <span class="accent">less magnetic</span>.</p>
+        </section>
+
+        <section class="chapter chapter--split">
+            <div class="chapter-copy">
+                <h2>The feature XFCE never had</h2>
+                <p>Grayscale mode is one of the best-known tricks for cutting doomscrolling &mdash; iOS and Android have shipped it for years. Unlike GNOME or KDE, XFCE4 has no setting to flip. <code>graytoggle</code> is that missing feature.</p>
+            </div>
+            <div class="chapter-media">
+                <img class="wide" loading="lazy" decoding="async"
+                    src="https://raw.githubusercontent.com/mkalmousli/graytoggle/master/assets/off.png"
+                    alt="Desktop in full colour" />
+            </div>
+        </section>
+
+        <section class="chapter chapter--split reverse">
+            <div class="chapter-copy">
+                <h2>Real luminance, live</h2>
+                <p>A per-window fragment shader computes true luminance
+                    (<code>0.2126R + 0.7152G + 0.0722B</code>) for every pixel, every frame. Nothing about your
+                    monitor, driver or display is touched &mdash; it's a pure compositing-layer effect.</p>
+            </div>
+            <div class="chapter-media">
+                <img class="wide" loading="lazy" decoding="async"
+                    src="https://raw.githubusercontent.com/mkalmousli/graytoggle/master/assets/on.png"
+                    alt="The same desktop in grayscale" />
+            </div>
+        </section>
+
+        <section class="statement">
+            <p>Run it once for grayscale.<br>Run it again to <span class="accent">put colour back</span>.</p>
+        </section>
+
+        <div class="details">
+            <h2 id="install">Install</h2>
+            <p>One-liner (clones the repo and runs <code>make install</code>):</p>
+            <pre class="cmd"><code>curl -fsSL https://raw.githubusercontent.com/mkalmousli/graytoggle/master/install.sh | sh</code></pre>
+            <p>Installs to <code>~/.local/bin/graytoggle</code>. Bind it to a shortcut in XFCE Keyboard
+                settings and toggle grayscale with one key. Manual install is in the
+                <a href="https://github.com/mkalmousli/graytoggle" rel="noopener">README</a>.</p>
+
             <h2>What I built</h2>
             <div class="callout">
-                <p>The hard part isn't the shader — it's owning the compositor safely. Running <code>graytoggle</code>
-                    disables xfwm4's built-in compositor via <code>xfconf-query</code>, hot-swaps in
-                    <code>picom</code> with a per-window fragment shader, and on the next run stops
-                    <code>picom</code> and hands compositing cleanly back to xfwm4 — no orphan processes, shadows and
-                    transparency intact, and a safe rollback if any step fails.</p>
-                <p>The shader computes real luminance (<code>0.2126R + 0.7152G + 0.0722B</code>) per pixel, per
-                    window, live. Nothing about the display, monitor, or graphics driver is touched — it is a pure
-                    compositing-layer effect. Missing dependencies are detected and the exact install command is
-                    printed for apt, dnf, pacman, or zypper.</p>
+                <p>The hard part isn't the shader &mdash; it's owning the compositor safely. Running
+                    <code>graytoggle</code> disables xfwm4's built-in compositor via <code>xfconf-query</code>,
+                    hot-swaps in <code>picom</code> with a per-window fragment shader, and on the next run stops
+                    <code>picom</code> and hands compositing cleanly back to xfwm4 &mdash; no orphan processes,
+                    shadows and transparency intact, and a safe rollback if any step fails.</p>
+                <p>Missing dependencies are detected and the exact install command is printed for apt, dnf, pacman or
+                    zypper.</p>
             </div>
-        </section>
 
-        <section>
             <h2>Built with</h2>
-            <div class="stack-group">
-                <h3>Languages</h3>
-                <div class="pills">
-                    <span class="pill">Python</span>
-                    <span class="pill">GLSL (fragment shader)</span>
-                    <span class="pill">Shell</span>
-                    <span class="pill">Makefile</span>
+            <div>
+                <div class="stack-group">
+                    <h3>Languages</h3>
+                    <div class="pills">
+                        <span class="pill">Python</span>
+                        <span class="pill">GLSL (fragment shader)</span>
+                        <span class="pill">Shell</span>
+                        <span class="pill">Makefile</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h3>Platform</h3>
+                    <div class="pills">
+                        <span class="pill">Linux / X11</span>
+                        <span class="pill">XFCE4 &middot; xfwm4</span>
+                        <span class="pill">picom compositor</span>
+                        <span class="pill">xfconf-query</span>
+                        <span class="pill">xprop</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h3>Delivery</h3>
+                    <div class="pills">
+                        <span class="pill">make install / uninstall</span>
+                        <span class="pill">curl one-liner installer</span>
+                        <span class="pill">Git</span>
+                    </div>
                 </div>
             </div>
-            <div class="stack-group">
-                <h3>Platform</h3>
-                <div class="pills">
-                    <span class="pill">Linux / X11</span>
-                    <span class="pill">XFCE4 · xfwm4</span>
-                    <span class="pill">picom compositor</span>
-                    <span class="pill">xfconf-query</span>
-                    <span class="pill">xprop</span>
-                </div>
-            </div>
-            <div class="stack-group">
-                <h3>Delivery</h3>
-                <div class="pills">
-                    <span class="pill">make install / uninstall</span>
-                    <span class="pill">curl one-liner installer</span>
-                    <span class="pill">Git</span>
-                </div>
-            </div>
-        </section>
 
-        <section>
-            <h2>Features</h2>
+            <h2>Everything else</h2>
             <div class="feature-grid">
                 <div class="feature">
                     <h3>One command, toggles</h3>
-                    <p>Run it to turn grayscale on; run it again to turn it off.</p>
-                </div>
-                <div class="feature">
-                    <h3>100% software</h3>
-                    <p>No monitor settings, no night-light gimmicks — a real-time compositor shader.</p>
+                    <p>Run to turn grayscale on; run again to turn it off.</p>
                 </div>
                 <div class="feature">
                     <h3>Clean handover</h3>
@@ -181,41 +201,32 @@
                 </div>
                 <div class="feature">
                     <h3>Dependency-aware</h3>
-                    <p>Detects what's missing and prints the right install command for your package manager.</p>
+                    <p>Prints the right install command for your package manager.</p>
                 </div>
                 <div class="feature">
                     <h3><code>--force</code> takeover</h3>
                     <p>Take over from another running compositor when you need to.</p>
                 </div>
-                <div class="feature">
-                    <h3>Hotkey-friendly</h3>
-                    <p>Bind it in XFCE Keyboard settings for a one-key grayscale toggle.</p>
-                </div>
             </div>
-        </section>
 
-        <section id="install">
-            <h2>Install</h2>
-            <p>One-liner (clones the repo and runs <code>make install</code>):</p>
-            <pre class="cmd"><code>curl -fsSL https://raw.githubusercontent.com/mkalmousli/graytoggle/master/install.sh | sh</code></pre>
-            <p>Installs to <code>~/.local/bin/graytoggle</code>. Then bind <code>graytoggle</code> to a shortcut and
-                toggle grayscale with one key. Full instructions and manual install are in the
-                <a href="https://github.com/mkalmousli/graytoggle" rel="noopener">README</a>.</p>
-        </section>
-
-        <section>
             <h2>Free &amp; open source</h2>
-            <p>graytoggle is licensed under the GPL-3.0. Issues and contributions are welcome on
+            <p>Licensed under the GPL-3.0. Issues and contributions are welcome on
                 <a href="https://github.com/mkalmousli/graytoggle" rel="noopener">GitHub</a>.</p>
-        </section>
 
-        <div class="meta">
-            <span>Linux · XFCE4</span>
-            <span>GPL-3.0</span>
-            <span>Python · GLSL</span>
-            <span>By <a href="/">Mohamad Almousli</a></span>
+            <div class="story-meta">
+                <span>Linux &middot; XFCE4</span>
+                <span>GPL-3.0</span>
+                <span>Python &middot; GLSL</span>
+                <span>By <a href="/">Mohamad Almousli</a></span>
+            </div>
         </div>
     </main>
+
+    <div class="app-cta-bar">
+        <a class="btn primary" href="#install">Install</a>
+        <a class="btn" href="https://github.com/mkalmousli/graytoggle" rel="noopener">GitHub</a>
+    </div>
+
 </body>
 
 </html>

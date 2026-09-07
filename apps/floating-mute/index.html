@@ -38,6 +38,7 @@
     <link rel="apple-touch-icon" href="/assets/mk.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap"
         rel="stylesheet">
 
@@ -72,59 +73,83 @@
 </head>
 
 <body>
-    <main id="content" class="app">
-        <a class="back" href="/">&larr; al-mo.de</a>
+    <header class="story-header">
+        <a class="brand" href="/">
+            <img src="/assets/mk.svg" alt="" width="20" height="20" />
+            <span>al-mo.de</span>
+        </a>
+        <span class="app-id">
+            <img src="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/icon.png" alt="" width="22" height="22" />
+            <span class="app-name">Floating Mute</span>
+        </span>
+    </header>
 
-        <header class="app-hero">
-            <img class="app-icon"
-                src="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/icon.png"
-                alt="Floating Mute icon" width="104" height="104" />
-            <div class="app-intro">
+    <main id="content" class="story-page">
+
+        <section class="chapter chapter--hero">
+            <div class="chapter-copy">
+                <img class="hero-logo" src="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/icon.png" alt="Floating Mute icon" width="96" height="96" />
+                <p class="eyebrow">Android &middot; Free &amp; open source</p>
                 <h1>Floating Mute</h1>
-                <p class="lede">Mute and unmute your Android with a single tap — from a floating button that sits on
-                    top of any app.</p>
+                <p class="chapter-lede">Silence, one tap away &mdash; on top of any app.</p>
                 <div class="cta-row">
-                    <a class="btn primary" href="https://f-droid.org/en/packages/com.github.mkalmousli.floating_mute"
-                        rel="noopener">Get it on F-Droid</a>
-                    <a class="btn" href="https://github.com/mkalmousli/FloatingMute/releases" rel="noopener">APK on
-                        GitHub</a>
+                    <a class="btn primary" href="https://f-droid.org/en/packages/com.github.mkalmousli.floating_mute" rel="noopener">Get it on F-Droid</a>
+                    <a class="btn" href="https://github.com/mkalmousli/FloatingMute/releases" rel="noopener">APK on GitHub</a>
                     <a class="btn" href="https://github.com/mkalmousli/FloatingMute" rel="noopener">Source</a>
                 </div>
-                <p>
-                    <a href="https://f-droid.org/en/packages/com.github.mkalmousli.floating_mute" rel="noopener"><img
-                            loading="lazy"
-                            src="https://img.shields.io/f-droid/v/com.github.mkalmousli.floating_mute?label=F-Droid&style=flat-square"
-                            alt="F-Droid version" height="20" /></a>
-                </p>
             </div>
-        </header>
-
-        <div class="shots" aria-label="Floating Mute screenshots">
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/phoneScreenshots/01.png"
-                alt="Floating Mute screenshot 1" />
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/phoneScreenshots/02.png"
-                alt="Floating Mute screenshot 2" />
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/phoneScreenshots/03.png"
-                alt="Floating Mute screenshot 3" />
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/phoneScreenshots/04.png"
-                alt="Floating Mute screenshot 4" />
-            <img loading="lazy"
-                src="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/phoneScreenshots/05.png"
-                alt="Floating Mute screenshot 5" />
-        </div>
-
-        <section>
-            <h2>Overview</h2>
-            <p>Watching a YouTube Short, a Reel, or any video and need silence <em>now</em>? One tap on the floating
-                button mutes your device — another tap restores the exact volume you had before. No pulling down the
-                status bar, no volume rocker, no leaving the app.</p>
+            <div class="chapter-media">
+                <img class="device" fetchpriority="high" decoding="async" width="1080" height="2400"
+                    src="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/phoneScreenshots/01.png"
+                    alt="The floating mute button resting on top of a video" />
+            </div>
         </section>
 
-        <section>
+        <section class="statement">
+            <p>One tap mutes.<br>One tap brings <span class="accent">it all back</span>.</p>
+        </section>
+
+        <section class="chapter chapter--split">
+            <div class="chapter-copy">
+                <h2>Always within reach</h2>
+                <p>The button floats over everything &mdash; a video, a game, a call. No pulling down the status bar, no volume rocker, no leaving what you're doing.</p>
+            </div>
+            <div class="chapter-media">
+                <img class="device" loading="lazy" decoding="async" width="1080" height="2400"
+                    src="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/phoneScreenshots/02.png"
+                    alt="Floating Mute button over another app" />
+            </div>
+        </section>
+
+        <section class="chapter chapter--split reverse">
+            <div class="chapter-copy">
+                <h2>Put it where it suits you</h2>
+                <p>Drag it anywhere on screen. Its position is remembered separately for portrait and landscape, so it's always where you left it.</p>
+            </div>
+            <div class="chapter-media">
+                <img class="device" loading="lazy" decoding="async" width="1080" height="2400"
+                    src="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/phoneScreenshots/03.png"
+                    alt="Dragging the Floating Mute button" />
+            </div>
+        </section>
+
+        <section class="chapter chapter--split">
+            <div class="chapter-copy">
+                <h2>Made yours</h2>
+                <p>Material 3 with Material You dynamic colour, and a live-preview Themes screen for size, colour, opacity and corner radius. Flick it to the bottom edge to hide it like a chat bubble.</p>
+            </div>
+            <div class="chapter-media">
+                <img class="device" loading="lazy" decoding="async" width="1080" height="2400"
+                    src="https://raw.githubusercontent.com/mkalmousli/FloatingMute/master/fastlane/metadata/android/en-US/images/phoneScreenshots/04.png"
+                    alt="Floating Mute themes screen" />
+            </div>
+        </section>
+
+        <section class="statement">
+            <p>No ads. No tracking.<br>No account. <span class="accent">Ever.</span></p>
+        </section>
+
+        <div class="details">
             <h2>What I built</h2>
             <div class="callout">
                 <p>Sole developer and maintainer. The app draws a persistent overlay with <code>WindowManager</code>
@@ -133,100 +158,85 @@
                     <code>AudioManager</code> and a <code>ContentObserver</code> to stay in sync with hardware volume
                     changes, and persists per-orientation button positions and theme settings.</p>
                 <p>Recent work: migrated to a foreground service to fix background kills, rebuilt the UI on Material 3
-                    with Material You dynamic colour and runtime Light/Dark/System theming, added a live-preview
-                    Themes screen (size, colour, opacity, corner radius), bubble-style drag-to-hide, and fixed a
-                    launch crash on Android 14+. Releases are reproducible builds verified by F-Droid.</p>
+                    with Material You dynamic colour and runtime Light/Dark/System theming, added the live-preview
+                    Themes screen, bubble-style drag-to-hide, and fixed a launch crash on Android 14+. Releases are
+                    reproducible builds verified by F-Droid.</p>
             </div>
-        </section>
 
-        <section>
             <h2>Built with</h2>
-            <div class="stack-group">
-                <h3>Language</h3>
-                <div class="pills"><span class="pill">Kotlin</span></div>
-            </div>
-            <div class="stack-group">
-                <h3>Platform</h3>
-                <div class="pills">
-                    <span class="pill">Android SDK (minSdk 21 · targetSdk 34)</span>
-                    <span class="pill">Foreground Service</span>
-                    <span class="pill">WindowManager overlay</span>
-                    <span class="pill">AudioManager</span>
+            <div>
+                <div class="stack-group">
+                    <h3>Language</h3>
+                    <div class="pills"><span class="pill">Kotlin</span></div>
+                </div>
+                <div class="stack-group">
+                    <h3>Platform</h3>
+                    <div class="pills">
+                        <span class="pill">Android SDK (minSdk 21 &middot; targetSdk 34)</span>
+                        <span class="pill">Foreground Service</span>
+                        <span class="pill">WindowManager overlay</span>
+                        <span class="pill">AudioManager</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h3>Libraries</h3>
+                    <div class="pills">
+                        <span class="pill">AndroidX AppCompat</span>
+                        <span class="pill">Fragments</span>
+                        <span class="pill">Material Components (Material 3)</span>
+                        <span class="pill">Kotlin Coroutines</span>
+                        <span class="pill">AndroidX Lifecycle</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h3>Build &amp; delivery</h3>
+                    <div class="pills">
+                        <span class="pill">Gradle (Kotlin DSL + version catalogs)</span>
+                        <span class="pill">Fastlane metadata</span>
+                        <span class="pill">F-Droid reproducible builds</span>
+                        <span class="pill">Git</span>
+                    </div>
                 </div>
             </div>
-            <div class="stack-group">
-                <h3>Libraries</h3>
-                <div class="pills">
-                    <span class="pill">AndroidX AppCompat</span>
-                    <span class="pill">Fragments</span>
-                    <span class="pill">Material Components (Material 3)</span>
-                    <span class="pill">Kotlin Coroutines</span>
-                    <span class="pill">AndroidX Lifecycle</span>
-                </div>
-            </div>
-            <div class="stack-group">
-                <h3>Build &amp; delivery</h3>
-                <div class="pills">
-                    <span class="pill">Gradle (Kotlin DSL + version catalogs)</span>
-                    <span class="pill">Fastlane metadata</span>
-                    <span class="pill">F-Droid reproducible builds</span>
-                    <span class="pill">Git</span>
-                </div>
-            </div>
-        </section>
 
-        <section>
-            <h2>Features</h2>
+            <h2>Everything else</h2>
             <div class="feature-grid">
                 <div class="feature">
-                    <h3>One-tap mute / unmute</h3>
-                    <p>Unmuting restores the previous volume level automatically.</p>
+                    <h3>Restores your volume</h3>
+                    <p>Unmuting brings back the exact level you had before.</p>
                 </div>
                 <div class="feature">
-                    <h3>Drag it anywhere</h3>
-                    <p>Position remembered separately for portrait and landscape.</p>
+                    <h3>Live volume percentage</h3>
+                    <p>Optional readout beside the button; long-press to toggle.</p>
+                </div>
+                <div class="feature">
+                    <h3>Tracks the hardware keys</h3>
+                    <p>Stays in sync when you use the volume rocker.</p>
                 </div>
                 <div class="feature">
                     <h3>Runs as a foreground service</h3>
                     <p>Android won't kill it in the background.</p>
                 </div>
-                <div class="feature">
-                    <h3>Material 3 &amp; Material You</h3>
-                    <p>Dynamic colours, instant Light / Dark / System switching.</p>
-                </div>
-                <div class="feature">
-                    <h3>Themes screen</h3>
-                    <p>Button size, colours (transparent too), opacity and corners, with a live preview.</p>
-                </div>
-                <div class="feature">
-                    <h3>Hide it like a bubble</h3>
-                    <p>Drag to the bottom edge to hide; bring it back from the notification.</p>
-                </div>
-                <div class="feature">
-                    <h3>Live volume percentage</h3>
-                    <p>Optional percentage shown beside the button; long-press to toggle.</p>
-                </div>
-                <div class="feature">
-                    <h3>Auto-adjusts</h3>
-                    <p>Tracks changes made with the hardware volume keys.</p>
-                </div>
             </div>
-        </section>
 
-        <section>
             <h2>Free &amp; open source</h2>
-            <p>Floating Mute is licensed under the GPL-3.0. No ads, no tracking, no account. Reproducible builds are
+            <p>Licensed under the GPL-3.0. No ads, no tracking, no account. Reproducible builds are
                 verified by F-Droid. Issues and contributions are welcome on
                 <a href="https://github.com/mkalmousli/FloatingMute" rel="noopener">GitHub</a>.</p>
-        </section>
 
-        <div class="meta">
-            <span>Android</span>
-            <span>GPL-3.0</span>
-            <span>Package: com.github.mkalmousli.floating_mute</span>
-            <span>By <a href="/">Mohamad Almousli</a></span>
+            <div class="story-meta">
+                <span>Android</span>
+                <span>GPL-3.0</span>
+                <span>com.github.mkalmousli.floating_mute</span>
+                <span>By <a href="/">Mohamad Almousli</a></span>
+            </div>
         </div>
     </main>
+
+    <div class="app-cta-bar">
+        <a class="btn primary" href="https://f-droid.org/en/packages/com.github.mkalmousli.floating_mute" rel="noopener">Get it on F-Droid</a>
+    </div>
+
 </body>
 
 </html>
