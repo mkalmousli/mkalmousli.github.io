@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <title>WayWayBack — Wayback Machine client for Android</title>
+    <meta name="description"
+        content="WayWayBack — an unofficial, fully client-side browser for the Internet Archive Wayback Machine. Walk a site's history on a heat-map calendar. Free & open source.">
+    <meta name="author" content="Mohamad Almousli">
+    <meta name="keywords"
+        content="WayWayBack, wwb, Wayback Machine app, Internet Archive client, web archive, Android, Flutter, Dart, open source, Mohamad Almousli">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="al-mo.de">
+    <meta property="og:title" content="WayWayBack — Wayback Machine client for Android">
+    <meta property="og:description"
+        content="An unofficial, fully client-side browser for the Internet Archive Wayback Machine. Free & open source.">
+    <meta property="og:url" content="https://al-mo.de/apps/waywayback/">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/mkalmousli/wwb/main/assets/icon/icon.png">
+    <meta property="og:image:alt" content="WayWayBack app icon">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WayWayBack — Wayback Machine client for Android">
+    <meta name="twitter:description"
+        content="An unofficial, fully client-side browser for the Internet Archive Wayback Machine.">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/mkalmousli/wwb/main/assets/icon/icon.png">
+
+    <link rel="canonical" href="https://al-mo.de/apps/waywayback/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/assets/mk.svg">
+    <link rel="apple-touch-icon" href="/assets/mk.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "SoftwareApplication",
+                "name": "WayWayBack",
+                "operatingSystem": "Android, Linux, Windows, macOS",
+                "applicationCategory": "BrowserApplication",
+                "description": "An unofficial, fully client-side browser for the Internet Archive Wayback Machine: search for a site, walk its capture history on a year/month/day heat-map calendar, and open any snapshot.",
+                "url": "https://al-mo.de/apps/waywayback/",
+                "image": "https://raw.githubusercontent.com/mkalmousli/wwb/main/assets/icon/icon.png",
+                "screenshot": "https://raw.githubusercontent.com/mkalmousli/wwb/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                "author": { "@type": "Person", "name": "Mohamad Almousli", "url": "https://al-mo.de/" },
+                "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+                "codeRepository": "https://github.com/mkalmousli/wwb",
+                "downloadUrl": "https://github.com/mkalmousli/wwb/releases/download/v1.0.0/wwb-1.0.0-universal.apk"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://al-mo.de/" },
+                    { "@type": "ListItem", "position": 2, "name": "WayWayBack", "item": "https://al-mo.de/apps/waywayback/" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <header class="story-header">
+        <a class="brand" href="/">
+            <img src="/assets/mk.svg" alt="" width="20" height="20" />
+            <span>al-mo.de</span>
+        </a>
+        <span class="app-id">
+            <img src="https://raw.githubusercontent.com/mkalmousli/wwb/main/assets/icon/icon.png" alt="" width="22" height="22" />
+            <span class="app-name">WayWayBack</span>
+        </span>
+    </header>
+
+    <main id="content" class="story-page">
+
+        <section class="chapter chapter--hero">
+            <div class="chapter-copy">
+                <img class="hero-logo" src="https://raw.githubusercontent.com/mkalmousli/wwb/main/assets/icon/icon.png" alt="WayWayBack icon" width="96" height="96" />
+                <p class="eyebrow">Android &middot; Desktop &middot; Free &amp; open source</p>
+                <h1>WayWayBack</h1>
+                <p class="chapter-lede">Walk any site's history on a heat-map calendar &mdash; year, month, day &mdash; and open the snapshot.</p>
+                <div class="cta-row">
+                    <a class="btn primary" href="https://github.com/mkalmousli/wwb/releases/download/v1.0.0/wwb-1.0.0-universal.apk" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 9v8a1 1 0 0 0 1 1h1v3.5a1.5 1.5 0 0 0 3 0V18h2v3.5a1.5 1.5 0 0 0 3 0V18h1a1 1 0 0 0 1-1V9H6Zm-4 1.5a1.5 1.5 0 0 1 3 0v5a1.5 1.5 0 0 1-3 0v-5Zm17 0a1.5 1.5 0 0 1 3 0v5a1.5 1.5 0 0 1-3 0v-5ZM7.6 7.5c.1-2 1.3-3.6 3.1-4.4L9.6 1.2a.3.3 0 0 1 .5-.3l1.1 1.9a6.3 6.3 0 0 1 3.6 0l1.1-1.9a.3.3 0 0 1 .5.3l-1.1 1.9c1.8.8 3 2.4 3.1 4.4H7.6Zm1.7-2.1a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4Zm5.4 0a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4Z"/></svg>
+                        Android APK</a>
+                    <a class="btn" href="https://github.com/mkalmousli/wwb/releases/download/v1.0.0/wwb-1.0.0-windows-x64.zip" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.4 10.4 4.3v7.2H3V5.4Zm0 13.2 7.4 1.1v-7.2H3v6.1Zm8.2 1.2L21 21V12.5h-9.8v7.3Zm0-15.6v7.3H21V3l-9.8 1.2Z"/></svg>
+                        Windows</a>
+                    <a class="btn" href="https://github.com/mkalmousli/wwb/releases/download/v1.0.0/wwb-1.0.0-linux-x64.tar.gz" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c-2.2 0-3.6 1.9-3.6 4.3 0 1.6.3 2.4.3 3.6 0 1.4-1.9 3.6-2.8 5.6-.9 2-2.2 3.3-2.2 4.4 0 .9.7 1.3 1.7 1.5 2 .4 3 .9 3.6.9.5 0 .8-.4 1.4-.6a8 8 0 0 1 3.6 0c.6.2.9.6 1.4.6.6 0 1.6-.5 3.6-.9 1-.2 1.7-.6 1.7-1.5 0-1.1-1.3-2.4-2.2-4.4-.9-2-2.8-4.2-2.8-5.6 0-1.2.3-2 .3-3.6C15.6 3.9 14.2 2 12 2Zm-1.6 4.1c.5 0 .9.5.9 1.2s-.4 1.2-.9 1.2-.9-.5-.9-1.2.4-1.2.9-1.2Zm3.2 0c.5 0 .9.5.9 1.2s-.4 1.2-.9 1.2-.9-.5-.9-1.2.4-1.2.9-1.2ZM12 9c.9 0 2 .6 2 1.1 0 .3-.4.5-.8.8-.4.2-.8.5-1.2.5s-.8-.3-1.2-.5c-.4-.3-.8-.5-.8-.8C10 9.6 11.1 9 12 9Z"/></svg>
+                        Linux</a>
+                    <a class="btn" href="https://github.com/mkalmousli/wwb/releases/download/v1.0.0/wwb-1.0.0-macos.zip" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3-.5 7.5 1.2 10 .9 1.2 1.9 2.5 3.2 2.4 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.1 3.2-2.3.6-.9 1-1.8 1.4-2.9-3.7-1.4-3.7-4.7-3.7-4.7ZM13.9 4.7c.7-.9 1.2-2 1-3.2-1 .1-2.3.7-3 1.5-.7.8-1.3 2-1.1 3.1 1.1.1 2.3-.6 3.1-1.4Z"/></svg>
+                        macOS</a>
+                    <a class="btn" href="https://github.com/mkalmousli/wwb" rel="noopener">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.79 2.74 1.27 3.4.97.11-.76.41-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.42.36.8 1.08.8 2.18v3.23c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+                        Source</a>
+                </div>
+            </div>
+            <div class="chapter-media">
+                <img class="device" fetchpriority="high" decoding="async" width="1080" height="2400"
+                    src="https://raw.githubusercontent.com/mkalmousli/wwb/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png"
+                    alt="WayWayBack home screen" />
+            </div>
+        </section>
+
+        <section class="statement">
+            <p>An unofficial Wayback Machine client with <span class="accent">no backend of its own</span>.</p>
+        </section>
+
+        <section class="chapter chapter--split">
+            <div class="chapter-copy">
+                <h2>Find the site</h2>
+                <p>Search merges instant URL guesses with two optional keyless engines &mdash; Wikipedia (article &rarr; homepage) and npm (package &rarr; repository). Recent searches are saved and offered next time.</p>
+            </div>
+            <div class="chapter-media">
+                <img class="device" loading="lazy" decoding="async" width="1080" height="2400"
+                    src="https://raw.githubusercontent.com/mkalmousli/wwb/main/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png"
+                    alt="WayWayBack search screen" />
+            </div>
+        </section>
+
+        <section class="chapter chapter--split reverse">
+            <div class="chapter-copy">
+                <h2>Read its history as a heat map</h2>
+                <p>Pick a year, a month, a day. Every day cell shows how many times the site was captured, on a heat scale. Years and months the archive says are empty are marked and never requested.</p>
+            </div>
+            <div class="chapter-media">
+                <img class="device" loading="lazy" decoding="async" width="1080" height="2400"
+                    src="https://raw.githubusercontent.com/mkalmousli/wwb/main/fastlane/metadata/android/en-US/images/phoneScreenshots/3.png"
+                    alt="WayWayBack calendar heat map" />
+            </div>
+        </section>
+
+        <section class="chapter chapter--split">
+            <div class="chapter-copy">
+                <h2>Open the exact snapshot</h2>
+                <p>A per-day list of captures with hour / minute / second filters that only offer the times that actually exist. Tap one to open it in your browser.</p>
+            </div>
+            <div class="chapter-media">
+                <img class="device" loading="lazy" decoding="async" width="1080" height="2400"
+                    src="https://raw.githubusercontent.com/mkalmousli/wwb/main/fastlane/metadata/android/en-US/images/phoneScreenshots/4.png"
+                    alt="WayWayBack per-day snapshot list" />
+            </div>
+        </section>
+
+        <section class="statement">
+            <p>No account. No tracking. No ads.<br><span class="accent">Everything stays on your device.</span></p>
+        </section>
+
+        <div class="details">
+            <h2>Get it</h2>
+            <p>All builds live on the <a href="https://github.com/mkalmousli/wwb/releases/latest" rel="noopener">latest
+                GitHub release</a>. Direct downloads:</p>
+            <div class="cta-row" style="justify-content:flex-start">
+                <a class="btn" href="https://github.com/mkalmousli/wwb/releases/download/v1.0.0/wwb-1.0.0-universal.apk" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 9v8a1 1 0 0 0 1 1h1v3.5a1.5 1.5 0 0 0 3 0V18h2v3.5a1.5 1.5 0 0 0 3 0V18h1a1 1 0 0 0 1-1V9H6Zm-4 1.5a1.5 1.5 0 0 1 3 0v5a1.5 1.5 0 0 1-3 0v-5Zm17 0a1.5 1.5 0 0 1 3 0v5a1.5 1.5 0 0 1-3 0v-5ZM7.6 7.5c.1-2 1.3-3.6 3.1-4.4L9.6 1.2a.3.3 0 0 1 .5-.3l1.1 1.9a6.3 6.3 0 0 1 3.6 0l1.1-1.9a.3.3 0 0 1 .5.3l-1.1 1.9c1.8.8 3 2.4 3.1 4.4H7.6Zm1.7-2.1a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4Zm5.4 0a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4Z"/></svg>
+                    Android APK &middot; universal</a>
+                <a class="btn" href="https://github.com/mkalmousli/wwb/releases/download/v1.0.0/wwb-1.0.0-windows-x64.zip" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.4 10.4 4.3v7.2H3V5.4Zm0 13.2 7.4 1.1v-7.2H3v6.1Zm8.2 1.2L21 21V12.5h-9.8v7.3Zm0-15.6v7.3H21V3l-9.8 1.2Z"/></svg>
+                    Windows &middot; .zip</a>
+                <a class="btn" href="https://github.com/mkalmousli/wwb/releases/download/v1.0.0/wwb-1.0.0-linux-x64.tar.gz" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c-2.2 0-3.6 1.9-3.6 4.3 0 1.6.3 2.4.3 3.6 0 1.4-1.9 3.6-2.8 5.6-.9 2-2.2 3.3-2.2 4.4 0 .9.7 1.3 1.7 1.5 2 .4 3 .9 3.6.9.5 0 .8-.4 1.4-.6a8 8 0 0 1 3.6 0c.6.2.9.6 1.4.6.6 0 1.6-.5 3.6-.9 1-.2 1.7-.6 1.7-1.5 0-1.1-1.3-2.4-2.2-4.4-.9-2-2.8-4.2-2.8-5.6 0-1.2.3-2 .3-3.6C15.6 3.9 14.2 2 12 2Zm-1.6 4.1c.5 0 .9.5.9 1.2s-.4 1.2-.9 1.2-.9-.5-.9-1.2.4-1.2.9-1.2Zm3.2 0c.5 0 .9.5.9 1.2s-.4 1.2-.9 1.2-.9-.5-.9-1.2.4-1.2.9-1.2ZM12 9c.9 0 2 .6 2 1.1 0 .3-.4.5-.8.8-.4.2-.8.5-1.2.5s-.8-.3-1.2-.5c-.4-.3-.8-.5-.8-.8C10 9.6 11.1 9 12 9Z"/></svg>
+                    Linux x64 &middot; .tar.gz</a>
+                <a class="btn" href="https://github.com/mkalmousli/wwb/releases/download/v1.0.0/wwb-1.0.0-macos.zip" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3-.5 7.5 1.2 10 .9 1.2 1.9 2.5 3.2 2.4 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.1 3.2-2.3.6-.9 1-1.8 1.4-2.9-3.7-1.4-3.7-4.7-3.7-4.7ZM13.9 4.7c.7-.9 1.2-2 1-3.2-1 .1-2.3.7-3 1.5-.7.8-1.3 2-1.1 3.1 1.1.1 2.3-.6 3.1-1.4Z"/></svg>
+                    macOS &middot; .zip</a>
+            </div>
+            <p>On Linux, extract and run <code>./wwb</code> (needs GTK&nbsp;3). On macOS the <code>.app</code> is
+                unsigned &mdash; run <code>xattr -dr com.apple.quarantine WayWayBack.app</code> once, then open it.
+                An F-Droid inclusion request is planned; the reproducible build is already in place.</p>
+
+            <h2>What I built</h2>
+            <div class="callout">
+                <p>Sole developer. A Flutter app for Android and desktop (Linux, Windows, macOS) that talks directly
+                    to the public <code>web.archive.org</code> endpoints &mdash; no server of my own. It uses the
+                    Wayback Machine's own calendar APIs (<code>sparkline</code> + <code>calendarcaptures</code>),
+                    fetches only the selected year, and caches results locally with a TTL so re-visits are instant.</p>
+                <p>Everything &mdash; starred sites and snapshots, open history, recent searches, home-tab order,
+                    theme &mdash; is stored on device in a <strong>drift</strong> (SQLite) database. Layers stay
+                    separated: data &rarr; state (Riverpod) &rarr; UI. Share a URL into the app or use
+                    <code>wwb://open?url=&hellip;</code> deep links to jump straight to a site's calendar. Releases
+                    are reproducible builds (pinned Flutter, fixed build path, Docker) ready for F-Droid.</p>
+            </div>
+
+            <h2>Built with</h2>
+            <div>
+                <div class="stack-group">
+                    <h3>Languages</h3>
+                    <div class="pills">
+                        <span class="pill">Dart</span>
+                        <span class="pill">Python</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h3>Framework &amp; platforms</h3>
+                    <div class="pills">
+                        <span class="pill">Flutter 3.41</span>
+                        <span class="pill">Android</span>
+                        <span class="pill">Linux (GTK 3)</span>
+                        <span class="pill">Windows</span>
+                        <span class="pill">macOS</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h3>Architecture &amp; libraries</h3>
+                    <div class="pills">
+                        <span class="pill">Riverpod</span>
+                        <span class="pill">drift (SQLite)</span>
+                        <span class="pill">build_runner / codegen</span>
+                        <span class="pill">Material 3 / Material You</span>
+                        <span class="pill">App links &amp; share intents</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h3>Data sources</h3>
+                    <div class="pills">
+                        <span class="pill">web.archive.org __wb sparkline</span>
+                        <span class="pill">calendarcaptures</span>
+                        <span class="pill">Wikipedia (keyless)</span>
+                        <span class="pill">npm registry (keyless)</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h3>Build &amp; delivery</h3>
+                    <div class="pills">
+                        <span class="pill">FVM</span>
+                        <span class="pill">Docker</span>
+                        <span class="pill">GitHub Actions</span>
+                        <span class="pill">Fastlane metadata</span>
+                        <span class="pill">Reproducible builds</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Everything else</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>Stars &amp; history</h3>
+                    <p>Star sites and snapshots; keep a local log of every link and capture you opened.</p>
+                </div>
+                <div class="feature">
+                    <h3>Share to open</h3>
+                    <p>Share a URL from any app, or use <code>wwb://</code> deep links, to jump to its calendar.</p>
+                </div>
+                <div class="feature">
+                    <h3>Themes &amp; layout</h3>
+                    <p>Light / dark / system, and drag-to-reorder home tabs.</p>
+                </div>
+                <div class="feature">
+                    <h3>Smart time filters</h3>
+                    <p>Hour / minute / second pickers that only show the times a capture exists.</p>
+                </div>
+            </div>
+
+            <h2>Independent &amp; unofficial</h2>
+            <p>WayWayBack is not the Wayback Machine and is not affiliated with, endorsed by, or connected to the
+                Internet Archive. It has no backend &mdash; it talks directly to the public
+                <code>web.archive.org</code> endpoints and stores all data locally. Archived content and trademarks
+                belong to their respective owners.</p>
+
+            <h2>Free &amp; open source</h2>
+            <p>Licensed under the GPL-3.0-or-later. No ads, no tracking, no account. Issues and contributions are
+                welcome on <a href="https://github.com/mkalmousli/wwb" rel="noopener">GitHub</a>.</p>
+
+            <div class="story-meta">
+                <span>Android &middot; Linux &middot; Windows &middot; macOS</span>
+                <span>GPL-3.0-or-later</span>
+                <span>Dart &middot; Flutter</span>
+                <span>By <a href="/">Mohamad Almousli</a></span>
+            </div>
+        </div>
+    </main>
+
+    <div class="app-cta-bar">
+        <a class="btn primary" href="https://github.com/mkalmousli/wwb/releases/latest" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 9v8a1 1 0 0 0 1 1h1v3.5a1.5 1.5 0 0 0 3 0V18h2v3.5a1.5 1.5 0 0 0 3 0V18h1a1 1 0 0 0 1-1V9H6Zm-4 1.5a1.5 1.5 0 0 1 3 0v5a1.5 1.5 0 0 1-3 0v-5Zm17 0a1.5 1.5 0 0 1 3 0v5a1.5 1.5 0 0 1-3 0v-5ZM7.6 7.5c.1-2 1.3-3.6 3.1-4.4L9.6 1.2a.3.3 0 0 1 .5-.3l1.1 1.9a6.3 6.3 0 0 1 3.6 0l1.1-1.9a.3.3 0 0 1 .5.3l-1.1 1.9c1.8.8 3 2.4 3.1 4.4H7.6Zm1.7-2.1a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4Zm5.4 0a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4Z"/></svg>
+            Android APK</a>
+        <a class="btn" href="https://github.com/mkalmousli/wwb/releases/latest" rel="noopener">All downloads</a>
+    </div>
+</body>
+
+</html>
