@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers static-assets config for al-mo.de.
+  // `name` must match the existing Worker this repo deploys to — change it if it differs.
+  "name": "al-mo-de",
+  "compatibility_date": "2026-09-09",
+  "assets": {
+    "directory": ".",
+    // Serve /404.html (styled) for any unknown path instead of a bare Cloudflare 404.
+    "not_found_handling": "404-page"
+  }
+}
