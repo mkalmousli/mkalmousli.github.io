@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <title>Claude Status Bar — a usage meter for Claude Code in your panel or tray</title>
+    <meta name="description"
+        content="Claude Status Bar — how much of your Claude Code 5-hour and weekly limits is gone, and how long until they reset, at a glance from your panel or tray. Linux, Windows and macOS. Free & open source.">
+    <meta name="author" content="Mohamad Almousli">
+    <meta name="keywords"
+        content="Claude Status Bar, Claude Code usage, rate limit meter, Claude Code status line, Xfce panel plugin, tray icon, Linux, Windows, macOS, Mohamad Almousli">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0b0f14" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="al-mo.de">
+    <meta property="og:title" content="Claude Status Bar — a usage meter for Claude Code">
+    <meta property="og:description"
+        content="Both rate limits at once — the 5-hour and the weekly, each with its own meter, percentage and countdown — in your panel or tray.">
+    <meta property="og:url" content="https://al-mo.de/apps/claude-status-bar/">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/mkalmousli/ClaudeStatusBar/main/screenshots/xfce4-plugin.png">
+    <meta property="og:image:alt" content="The Claude Status Bar panel item: two meters, percentage used, and countdowns">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Claude Status Bar — a usage meter for Claude Code">
+    <meta name="twitter:description" content="Your Claude Code 5-hour and weekly limits, at a glance from your panel or tray.">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/mkalmousli/ClaudeStatusBar/main/screenshots/xfce4-plugin.png">
+
+    <link rel="canonical" href="https://al-mo.de/apps/claude-status-bar/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="/assets/mk.svg">
+    <link rel="apple-touch-icon" href="/assets/mk.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "SoftwareApplication",
+                "name": "Claude Status Bar",
+                "operatingSystem": "Linux, Windows, macOS",
+                "applicationCategory": "DeveloperApplication",
+                "description": "A usage meter for Claude Code that lives in your panel or tray: how much of your 5-hour and weekly rate limits is gone, and how long until they reset. Reads only what Claude Code already writes on your machine.",
+                "url": "https://al-mo.de/apps/claude-status-bar/",
+                "image": "https://raw.githubusercontent.com/mkalmousli/ClaudeStatusBar/main/screenshots/xfce4-plugin.png",
+                "screenshot": "https://raw.githubusercontent.com/mkalmousli/ClaudeStatusBar/main/screenshots/gui.png",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                "author": { "@type": "Person", "name": "Mohamad Almousli", "url": "https://al-mo.de/" },
+                "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+                "codeRepository": "https://github.com/mkalmousli/ClaudeStatusBar"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://al-mo.de/" },
+                    { "@type": "ListItem", "position": 2, "name": "Claude Status Bar", "item": "https://al-mo.de/apps/claude-status-bar/" }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <header class="story-header">
+        <a class="brand" href="/">
+            <img src="/assets/mk.svg" alt="" width="20" height="20" />
+            <span>al-mo.de</span>
+        </a>
+        <span class="app-id">
+            <img src="/assets/claude-status-bar.svg" alt="" width="20" height="20" />
+            <span class="app-name">Claude Status Bar</span>
+        </span>
+    </header>
+
+    <main id="content" class="story-page">
+
+        <section class="chapter chapter--hero">
+            <div class="chapter-copy">
+                <span class="hero-logo"><img src="/assets/claude-status-bar.svg" alt="" width="64" height="64" /></span>
+                <p class="eyebrow">Linux &middot; Windows &middot; macOS &middot; Open source</p>
+                <h1>Claude Status Bar</h1>
+                <p class="chapter-lede">How much of your Claude Code 5-hour and weekly limits is gone, and how long
+                    until they reset &mdash; at a glance, without opening anything.</p>
+                <div class="cta-row">
+                    <a class="btn primary" href="#install">Install</a>
+                    <a class="btn" href="https://github.com/mkalmousli/ClaudeStatusBar" rel="noopener">View on GitHub</a>
+                </div>
+            </div>
+            <div class="chapter-media">
+                <img class="wide" fetchpriority="high" decoding="async"
+                    src="https://raw.githubusercontent.com/mkalmousli/ClaudeStatusBar/main/screenshots/xfce4-plugin.png"
+                    alt="The panel item: two meters, the percentage used, and the countdown to each reset" />
+            </div>
+        </section>
+
+        <section class="statement">
+            <p>The number you actually want is <span class="accent">how much is left</span>.</p>
+        </section>
+
+        <section class="chapter chapter--split">
+            <div class="chapter-copy">
+                <h2>Both rate limits at once</h2>
+                <p>The 5-hour window and the weekly one, each with its own meter, percentage and countdown.
+                    Colour runs green &rarr; amber &rarr; orange &rarr; red by configurable bands, and the number
+                    sits beside the meter &mdash; colour is never the only thing carrying the reading.</p>
+            </div>
+            <div class="chapter-media">
+                <img class="wide" loading="lazy" decoding="async"
+                    src="https://raw.githubusercontent.com/mkalmousli/ClaudeStatusBar/main/screenshots/gui.png"
+                    alt="The overview window: both limits with reset times, session cost, context and token history" />
+            </div>
+        </section>
+
+        <section class="chapter chapter--split reverse">
+            <div class="chapter-copy">
+                <h2>Updates the moment a session writes</h2>
+                <p>A file watch, not a poll. Rate limits only exist inside a running Claude Code session, so a line
+                    is spliced into your <code>statusline.sh</code> (or set as Claude's <code>statusLine</code> on
+                    Windows). The reading lands in <code>~/.claude/statusbar-state.json</code>, and the panel redraws.
+                    Nothing about your usage leaves the machine.</p>
+            </div>
+            <div class="chapter-media">
+                <img class="wide" loading="lazy" decoding="async"
+                    src="https://raw.githubusercontent.com/mkalmousli/ClaudeStatusBar/main/screenshots/sessions.png"
+                    alt="The sessions tab: every stored snapshot, with a check on the one the meter is reading" />
+            </div>
+        </section>
+
+        <section class="statement">
+            <p>One picture in the panel.<br>One <span class="accent">details window</span> when you want the rest.</p>
+        </section>
+
+        <div class="details">
+            <h2 id="install">Install</h2>
+            <p>Linux, with <a href="https://docs.astral.sh/uv/" rel="noopener">uv</a> and Python 3.9+:</p>
+            <pre class="cmd"><code>git clone https://github.com/mkalmousli/ClaudeStatusBar.git
+cd ClaudeStatusBar
+make install</code></pre>
+            <p>Windows and macOS (or Linux without <code>make</code>):</p>
+            <pre class="cmd"><code>uv sync
+uv run claude-statusbar --install</code></pre>
+            <p>The installer wires up capture, then sets up whichever integration fits the machine. <code>--uninstall</code>
+                reverses all of it. Full notes, including the compiled Xfce panel plugin, are in the
+                <a href="https://github.com/mkalmousli/ClaudeStatusBar" rel="noopener">README</a>.</p>
+
+            <h2>Where it appears</h2>
+            <div class="callout">
+                <p>On <strong>Xfce</strong> you get a real <code>xfce4-panel</code> plugin (compiled C) &mdash;
+                    <em>Add New Items&hellip; &rarr; Claude Status Bar</em>. <strong>KDE, Cinnamon, MATE and Budgie</strong>
+                    get a StatusNotifier tray icon; <strong>GNOME</strong> the same, with the AppIndicator extension.
+                    <strong>Windows</strong> gets a notification-area icon and <strong>macOS</strong> a menu-bar item.</p>
+                <p>The Xfce plugin is a compiled GTK module because the panel loads plugins as shared libraries;
+                    everything else is Qt. Both draw the same SVG, so the panel item and the tray icon are the same
+                    picture.</p>
+            </div>
+
+            <h2>Built with</h2>
+            <div>
+                <div class="stack-group">
+                    <h3>Languages</h3>
+                    <div class="pills">
+                        <span class="pill">Python</span>
+                        <span class="pill">C (Xfce plugin)</span>
+                        <span class="pill">Makefile</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h3>Platform</h3>
+                    <div class="pills">
+                        <span class="pill">PySide6 / Qt</span>
+                        <span class="pill">GTK 3 &middot; libxfce4panel</span>
+                        <span class="pill">StatusNotifier / AppIndicator</span>
+                        <span class="pill">platformdirs</span>
+                    </div>
+                </div>
+                <div class="stack-group">
+                    <h3>Delivery</h3>
+                    <div class="pills">
+                        <span class="pill">uv</span>
+                        <span class="pill">make install / uninstall</span>
+                        <span class="pill">Git</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Everything else</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>Honest about staleness</h3>
+                    <p>Liveness comes from your newest session log, not the state file &mdash; it says <code>updated
+                        16m ago</code> while a turn runs, and only warns when nothing is open.</p>
+                </div>
+                <div class="feature">
+                    <h3>Several sessions at once</h3>
+                    <p>Each session writes its own snapshot; the highest reading in the current window is the
+                        freshest, and that's what's shown. The Sessions tab shows it happening.</p>
+                </div>
+                <div class="feature">
+                    <h3>Settings apply live</h3>
+                    <p>No Save button. Only values you change are written, so the rest keep following the defaults
+                        across upgrades.</p>
+                </div>
+                <div class="feature">
+                    <h3>Offline by default</h3>
+                    <p>The one network request is an optional once-a-day check for a new release, and it switches
+                        off in Settings.</p>
+                </div>
+            </div>
+
+            <h2>Free &amp; open source</h2>
+            <p>Licensed under the GPL-3.0-or-later. Issues and contributions are welcome on
+                <a href="https://github.com/mkalmousli/ClaudeStatusBar" rel="noopener">GitHub</a>.</p>
+
+            <div class="story-meta">
+                <span>Linux &middot; Windows &middot; macOS</span>
+                <span>GPL-3.0-or-later</span>
+                <span>Python &middot; C</span>
+                <span>By <a href="/">Mohamad Almousli</a></span>
+            </div>
+        </div>
+    </main>
+
+    <div class="app-cta-bar">
+        <a class="btn primary" href="#install">Install</a>
+        <a class="btn" href="https://github.com/mkalmousli/ClaudeStatusBar" rel="noopener">GitHub</a>
+    </div>
+
+</body>
+
+</html>
